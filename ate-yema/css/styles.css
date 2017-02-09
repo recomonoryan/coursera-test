@@ -5,16 +5,25 @@
 body{
 	background-color: #ff9900;
 }
-
-#logo-img{
+#header-order-menu{
+	margin-top: 60px;
+}
+/*center the logo*/
+#logo-img{ 
 	margin-right: auto;
 	margin-left: auto;
 }
 
+/* Welcome to Ate Yema's */
 #title-header{
 	font-family: 'Pacifico', cursive;
 	color: #ff3333;
 	text-shadow: 2px 2px #ffffff;
+}
+
+.affix{
+	bottom: 0;
+	width: 100%;
 }
 
 #order-row{
@@ -23,21 +32,31 @@ body{
 }
 
 .form-tile{
+	margin-top: 100px;
+	margin-bottom: 30px;
+}
+
+.order-tile{
 	margin-top: 30px;
 	margin-bottom: 30px;
 }
 
-#order-content, #payment-content, #details-content, #order-receipt, #header-nav, .panel{
+#order-content, #payment-content, #details-content, #order-receipt, #header-nav, #link-to-order, .panel, .section-content{
 	font-family: 'Montserrat', sans-serif;
 }
 
-#order-content, #payment-content, #details-content, #order-receipt{
+#order-content, #payment-content, #details-content, #order-receipt, .section-content{
 	background-color: #ffffff;
 	color: #ff3333;
 	padding: 10px 10px 10px 10px;
 	border-radius: 4px;
 	border: 1px solid #ff3333;
 	box-shadow: 0 0 20px #000000;
+}
+
+.section-content{
+	padding: 15px 15px 15px 15px;
+	margin-bottom: 15px;
 }
 
 #header-nav{
@@ -70,6 +89,33 @@ body{
 	margin-top: 10px;
 }
 
+.col-align{
+	text-align: left;
+}
+
+.btn-width{
+	width: 100%;
+}
+
+#cart-row, #login-box{
+	margin-top: 80px;
+}
+
+/****** ORDER MENU LINK FROM LOGIN ******/
+
+#link-to-order{
+	text-decoration: none;
+	color: #ffffff;
+}
+
+#link-to-order:hover, #link-to-order:focus{
+	color: #ff3333;
+}
+
+/****** END ******/
+
+/****** ORDER SUMMARY ******/
+
 #remarks-description, #receipt-description{
 	font-size: 80%;
 }
@@ -79,14 +125,9 @@ body{
 	padding-right: 15px;
 }
 
-.col-align{
-	text-align: left;
-}
+/****** END OF ORDER SUMMARY ******/
 
-.btn-width{
-	width: 100%;
-}
-
+/****** LOGIN ******/
 .panel {
   border-radius: 5px;
   border: none;
@@ -138,10 +179,58 @@ body{
   width: 100%;
   text-align: right;
 }
+
 .panel-default>.panel-heading a#login-link {
   width: 100%;
   text-align: left;
 }
+
+/****** END OF LOGIN ******/
+
+/******CART******/
+
+.title-headers{
+	border-bottom: 1px solid #d9d9d9;
+	padding-bottom: 10px;
+}
+
+.cart-table{
+	color: #1a1a1a;
+}
+
+.cart-table>tbody>tr>td{
+	border-top: none;
+}
+
+.cart-table>thead>tr>th{
+	border-bottom: none;
+}
+
+.cart-table>thead{
+	background-color: #ff3333;
+	color: #ffffff;
+}
+
+.total-label{
+	font-size: 1.2em;
+	font-style: bold;
+}
+
+.cart-price{
+	font-size: 1.2em;
+}
+
+#cart-row>section:nth-child(2) div>.btn{
+	padding: 6px 0px;
+	font-size: 120%;
+}
+
+/* top margin for 'Proceed to Checkout' button */
+#cart-row>section:nth-child(2) .row div:nth-child(3){
+	margin-top: 20px;
+}
+
+/****** END OF CART ******/
 
 @media(max-width: 500px){
 	#logo-img{
@@ -153,7 +242,7 @@ body{
 		font-size: 7vw;
 	}
 
-	.price, label, .btn, .row-receipt span{
+	.price, label, .btn, .row-receipt span, .total-label{
 		font-size: 3.5vw;
 	}
 

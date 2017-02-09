@@ -11,7 +11,7 @@
 	</head>
 	<body>
 		<header>
-		    <nav id="header-nav" class="navbar navbar-default">
+		    <nav id="header-nav" class="navbar navbar-default navbar-fixed-top">
 		      <div class="container">
 		        <div class="navbar-header">
 		          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
@@ -29,7 +29,7 @@
 		                <span class="glyphicon glyphicon-log-in"></span> Login</a>
 		            </li>
 		            <li>
-		              <a href="#">
+		              <a href="#" onclick="$dc.loadCart();">
 		                <span class="glyphicon glyphicon-shopping-cart"></span>Cart</a>
 		            </li>
 		          </ul>
@@ -37,18 +37,18 @@
 		      </div>
 		    </nav>
 		</header>
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<img id="logo-img" src="images/ate-yema-logo.jpg" class="img-responsive" width="250px" height="253px">
-				</div>
-				<div class="col-lg-12">
-					<h1 id="title-header" class="text-center">Welcome to Ate Yema's!</h1>
-				</div>
-				<div id="main-content">
-				</div>
-			</div>
+		<div id="main-content" class="container">
+
 		</div>
+	    <!--<footer class="panel-footer" data-spy="affix">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-4">
+						<img id="logo-img" src="images/ate-yema-logo.jpg" class="img-responsive" width="100px" height="103px">
+					</div>
+				</div>
+	        </div>
+	    </footer>-->
 		<script src="js/jquery-3.1.1.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/ajax-utils.js"></script>

@@ -1,5 +1,13 @@
-<form id="customer-form" role="form" action="javascript:void(0);">
-	<div class="form-tile col-lg-12">
+<div id="header-order-menu" class="row">
+	<div class="col-lg-12">
+		<img id="logo-img" src="images/ate-yema-logo.jpg" class="img-responsive" width="250px" height="253px">
+	</div>
+	<div class="col-lg-12">
+		<h1 id="title-header" class="text-center">Welcome to Ate Yema's!</h1>
+	</div>
+</div>
+<form id="order-form" role="form" action="javascript:void(0);">
+	<div class="order-tile col-lg-12">
 		<div id="order-content">
 			<h2 id="title-order-form" class="text-center">ORDER MENU (1/3)</h2>
 			<div id="order-row" class="row">
@@ -155,119 +163,8 @@
 						</div>
 					</div>
 				</section>
-				<button class="pull-right btn btn-primary btn-next">Next</button>
+				<button class="pull-right btn btn-primary btn-next" onclick="$dc.loadCart();">Proceed to Cart</button>
 			</div>
-		</div>
-	</div>
-	<div class="form-tile col-lg-offset-3 col-lg-6">
-		<div id="payment-content">
-			<h2 id="title-order-form" class="text-center">PAYMENT & DELIVERY (2/3)</h2>
-			<div class="form-group">
-				<label for="payment">Payment Options</label>
-				<select class="form-control" id="payment" name="payment-option" required>
-					<option>Payment 1</option>
-					<option>Payment 2</option>
-					<option>Payment 3</option>
-					<option>Payment 4</option>
-				</select>
-			</div>
-			<div class="form-group">
-				<label for="delivery">Delivery Options</label>
-				<select class="form-control" id="delivery" name="delivery-option" required>
-					<option>Delivery 1</option>
-					<option>Delivery 2</option>
-					<option>Delivery 3</option>
-					<option>Delivery 4</option>
-				</select>
-			</div>
-			<div class="form-group">
-				<label for="remarks">Remarks</label>
-				<p id="remarks-description">*Please indicate here when or where you want the delivery to be made. If not indicated, then default delivery time and the address you will provide on the next page will be considered. </p>
-				<textarea class="form-control" rows="5" id="remarks" name="remark-name"></textarea>
-			</div>
-			<div class="form-group">
-				<button class="pull-right btn btn-primary btn-next">Next</button>
-				<button class="btn btn-primary btn-previous">Previous</button>
-			</div>
-		</div>
-	</div>
-	<div class="form-tile col-lg-offset-3 col-lg-6">
-		<div id="order-receipt">
-			<h2 id="title-order-form" class="text-center">ORDER RECEIPT</h2>
-			<p id="receipt-description">*Please review your order and check any details if its correct before submitting it. A copy will be sent to your email including your order number. Thank you!</p>
-			<label>Order/s</label>
-			<div class="row row-receipt">
-				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-xxs-6">
-					<span>Food For The Gods x 2</span>
-				</div>
-				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-xxs-6">
-					<span>&#8369 880</span>
-				</div>
-				<div class="clearfix visible-xs-block"></div>
-				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-xxs-6">
-					<span>Classic Yema x 2</span>
-				</div>
-				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-xxs-6">
-					<span>&#8369 440</span>
-				</div>
-				<div class="clearfix visible-xs-block"></div>
-				<div class="col-lg-12">
-					<hr>
-				</div>
-				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-xxs-6">
-					<span>Sub-total:</span>
-				</div>
-				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-xxs-6">
-					<span>&#8369 1320.00</span>
-				</div>
-				<div class="clearfix visible-xs-block"></div>
-				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-xxs-6">
-					<span>Delivery Charge:<span>
-				</div>
-				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-xxs-6">
-					<span>&#8369 0.00</span>
-				</div>
-				<div class="clearfix visible-xs-block"></div>
-				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-xxs-6">
-					<span>TOTAL:<span>
-				</div>
-				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-xxs-6">
-					<span>&#8369 1320.00</span>
-				</div>
-			</div>
-			<label>Payment & Delivery</label>
-			<div class="row row-receipt">
-				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-xxs-6">
-					<span>Payment Option: <span>
-				</div>
-				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-xxs-6">
-					<span>PayMaya<span>
-				</div>
-				<div class="clearfix visible-xs-block"></div>
-				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-xxs-6">
-					<span>Delivery Option: <span>
-				</div>
-				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-xxs-6">
-					<span>LBC<span>
-				</div>
-				<div class="clearfix visible-xs-block"></div>
-				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-xxs-6">
-					<span>Remarks: <span>
-				</div>
-				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-xxs-6">
-					<span>Please deliver on May 9, 2017 and at Quezon City<span>
-				</div>
-			</div>
-			<button class="pull-right btn btn-primary btn-next">Submit</button>
-			<button class="btn btn-primary btn-previous">Previous</button>
-			<!--<p>
-				Food For The Gods x <span>2</span> =  &#8369<span>880</span><br>
-				Classic Yema x <span>2</span> =  &#8369<span>440</span>
-				<hr>
-				<span>Sub-total: &#8369 1320.00</span><br>
-				Delivery Charge: <span>&#8369 0.00</span><br>
-				TOTAL: &#8369 1320.00
-			</p>-->
 		</div>
 	</div>
 </form>
