@@ -1,0 +1,230 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Ate Yema - Dashboard</title>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="../css/bootstrap.min.css">
+    	<link rel="stylesheet" href="../css/styles.css">
+    	<link href="https://fonts.googleapis.com/css?family=Montserrat|Pacifico" rel="stylesheet">
+	</head>
+	<body class="admin-body">
+		<div class="container">
+			<header>
+			    <nav id="header-nav" class="navbar navbar-default navbar-fixed-top">
+			      <div class="container">
+			        <div class="navbar-header">
+			          <div class="navbar-brand">
+			          	<a href="dashboard.html" class="title-header"><h1 class="text-center" style="font-size: 150%">Welcome to Ate Yema's!</h1></a>
+			          </div>
+			          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+			            <span class="sr-only">Toggle navigation</span>
+			            <span class="icon-bar"></span>
+			            <span class="icon-bar"></span>
+			            <span class="icon-bar"></span>
+			          </button>
+			        </div>
+			        
+			        <div id="collapsable-nav" class="collapse navbar-collapse">
+			           <ul id="nav-list" class="nav navbar-nav navbar-right">
+			            <li>
+			              <a href="#" onclick="$dc.loadLogin();">
+			                <span class="glyphicon glyphicon-user"></span> Kathryn Carpio (Admin)</a>
+			            </li>
+			            <li>
+			              <a href="#" onclick="$dc.loadCart();">
+			                <span class="glyphicon glyphicon-log-out"></span> Logout</a>
+			            </li>
+			          </ul>
+			        </div>
+			      </div>
+			    </nav>
+			</header>
+		</div>
+		<div id="admin-content" class="container">
+			<div class="row">
+				<div class="col-lg-7 col-md-7 col-sm-6 col-xs-12">
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="dashboard-section">
+								<div class="row">
+									<div class="col-lg-4">
+										<a class="link-tiles" href="#">
+											<div class="tiles">
+												<img src="../images/user-group-icon.png" class="img-responsive">
+												<span>User Management</span>
+											</div>
+										</a>
+									</div>
+									<div class="col-lg-4">
+										<a class="link-tiles" href="order-tracking.html">
+											<div class="tiles">
+												<img src="../images/order-tracking.png" class="img-responsive">
+												<span>Order Tracking</span>
+											</div>
+										</a>
+									</div>
+									<div class="col-lg-4">
+										<a class="link-tiles" href="#">
+											<div class="tiles">
+												<img src="../images/analytics.png" class="img-responsive">
+												<span>Analytics</span>
+											</div>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-12" style="margin-top: 20px; margin-bottom: 20px;">
+							<div class="dashboard-section">
+								<div id="container-chart">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-5 col-md-5 col-sm-6 col-xs-12">
+					<div class="dashboard-section">
+						<h3 class="title-headers"><span class="glyphicon glyphicon-shopping-cart"></span> Undelivered Orders</h3>
+						<div class="table-reponsive">
+							<table class="table">
+								<thead>
+									<tr>
+										<th>ORDER ID</th>
+										<th>STATUS</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>#83690</td>
+										<td>UNDELIVERED</td>
+									</tr>
+									<tr>
+										<td>#83691</td>
+										<td>UNDELIVERED</td>
+									</tr>
+									<tr>
+										<td>#83692</td>
+										<td>UNDELIVERED</td>
+									</tr>
+									<tr>
+										<td>#83693</td>
+										<td>UNDELIVERED</td>
+									</tr>
+									<tr>
+										<td>#83694</td>
+										<td>UNDELIVERED</td>
+									</tr>
+									<tr>
+										<td>#83695</td>
+										<td>UNDELIVERED</td>
+									</tr>
+									<tr>
+										<td>#83696</td>
+										<td>UNDELIVERED</td>
+									</tr>
+									<tr>
+										<td>#83697</td>
+										<td>UNDELIVERED</td>
+									</tr>
+									<tr>
+										<td>#83698</td>
+										<td>UNDELIVERED</td>
+									</tr>
+									<tr>
+										<td>#83699</td>
+										<td>UNDELIVERED</td>
+									</tr>
+									<tr>
+										<td>#83699</td>
+										<td>UNDELIVERED</td>
+									</tr>
+									<tr>
+										<td>#83699</td>
+										<td>UNDELIVERED</td>
+									</tr>
+									<tr>
+										<td>#83699</td>
+										<td>UNDELIVERED</td>
+									</tr>
+									<tr>
+										<td>#83699</td>
+										<td>UNDELIVERED</td>
+									</tr>
+									<tr>
+										<td>#83699</td>
+										<td>UNDELIVERED</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<a class="pull-right" href="#" onclick="$dc.loadOrderForm();">View More <span class="glyphicon glyphicon-chevron-right"></span></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../js/jquery-3.1.1.min.js"></script>
+		<script src="../js/bootstrap.min.js"></script>
+		<script src="../js/ajax-utils.js"></script>
+		<script src="../js/script.js"></script>
+		<script src="../js/highcharts/highcharts.js"></script>
+		<script src="../js/highcharts/modules/exporting.js"></script>
+		<script>
+			$(function(){
+				Highcharts.chart('container-chart', {
+				    chart: {
+				        plotBackgroundColor: null,
+				        plotBorderWidth: null,
+				        plotShadow: false,
+				        type: 'pie'
+				    },
+				    title: {
+				        text: 'Browser market shares January, 2015 to May, 2015'
+				    },
+				    tooltip: {
+				        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+				    },
+				    plotOptions: {
+				        pie: {
+				            allowPointSelect: true,
+				            cursor: 'pointer',
+				            dataLabels: {
+				                enabled: true,
+				                format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+				                style: {
+				                    color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+				                }
+				            }
+				        }
+				    },
+				    series: [{
+				        name: 'Brands',
+				        colorByPoint: true,
+				        data: [{
+				            name: 'Microsoft Internet Explorer',
+				            y: 56.33
+				        }, {
+				            name: 'Chrome',
+				            y: 24.03,
+				            sliced: true,
+				            selected: true
+				        }, {
+				            name: 'Firefox',
+				            y: 10.38
+				        }, {
+				            name: 'Safari',
+				            y: 4.77
+				        }, {
+				            name: 'Opera',
+				            y: 0.91
+				        }, {
+				            name: 'Proprietary or Undetectable',
+				            y: 0.2
+				        }]
+				    }]
+				});
+			});
+		</script>
+	</body>
+</html>
