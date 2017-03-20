@@ -1,0 +1,68 @@
+*{
+	box-sizing: border-box;
+}
+
+body{
+	background: #ffcc00;
+	font-family: 'Ubuntu', sans-serif;
+}
+.error{
+	color: #ff3333;
+}
+
+.error-input{
+	border: 1px solid #ff3333;
+}
+
+.login-section{
+	padding: 30px;
+}
+
+#button_login{
+	float: right;
+}
+
+fieldset{
+	display: block;
+    -webkit-margin-start: 2px;
+    -webkit-margin-end: 2px;
+    -webkit-padding-before: 0.35em;
+    -webkit-padding-start: 0.75em;
+    -webkit-padding-end: 0.75em;
+    -webkit-padding-after: 0.625em;
+    min-width: -webkit-min-content;
+    border-width: 2px;
+    border-style: groove;
+    border-color: threedface;
+    border-image: initial;
+}
+
+legend{
+	display: block;
+    -webkit-padding-start: 2px;
+    -webkit-padding-end: 2px;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+    width: auto;
+}
+
+@media (max-width: 767px){
+	legend{
+		font-size: 4vw;
+	}
+}
+
+@media (max-width: 395px){
+	/*.form-group > #forgot{
+		clear: right !important;
+	}*/
+	#button_login{
+		padding: 5px 10px;
+		font-size: 12px;
+		line-height: 1.5;
+		border-radius: 3px;
+		float: none;
+	}
+}
